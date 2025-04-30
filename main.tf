@@ -76,7 +76,7 @@ resource "aws_iam_role_policy_attachment" "ssm_attach" {
 }
 
 resource "aws_iam_instance_profile" "ssm_profile" {
-  name = "EC2SSMProfile"
+  name = "EC2SSMProfile-${random_string.suffix.result}"
   role = aws_iam_role.ssm_role.name
 }
 
