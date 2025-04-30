@@ -80,6 +80,12 @@ resource "aws_iam_instance_profile" "ssm_profile" {
   role = aws_iam_role.ssm_role.name
 }
 
+resource "random_string" "suffix" {
+  length  = 5
+  special = false
+}
+
+
 data "aws_ami" "amazon_linux" {
   most_recent = true
   owners      = ["amazon"]
