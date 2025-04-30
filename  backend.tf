@@ -3,7 +3,7 @@ terraform {
     organization = "k-is-a-moron"
 
     workspaces {
-      name = "terraform-cloud"
+      name = "tfc-public"
     }
   }
 
