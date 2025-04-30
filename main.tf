@@ -56,7 +56,7 @@ resource "aws_security_group" "web" {
 }
 
 resource "aws_iam_role" "ssm_role" {
-  name = "EC2SSMRole"
+  name = "EC2SSMRole-${random_string.suffix.result}"
 
   assume_role_policy = jsonencode({
     Version = "2012-10-17",
